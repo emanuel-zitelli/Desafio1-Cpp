@@ -4,52 +4,43 @@
 int main()
 {
     short int opcion;
-    auxAutos auxAutos;
-    auxMotos auxMotos;
-    auxCamiones auxCamiones;
-
     std::vector<Vehiculo*> listadoVehiculos;
-    
-    /*
-    listadoVehiculos.push_back(new AutoElectrico("ford", "focus", 1999, 30.9, 5, 0));
-    listadoVehiculos.push_back(new Moto("volkswagen", "gol", 2020, 31, 0));
-    listadoVehiculos.push_back(new Camion("volkswagen", "gol", 2020, 31, 5));
-    mostrarLista(listadoVehiculos);
-
-    opcion!=static_cast<int>(AccionBasica::Terminar)
-    opcion!=static_cast<int>(AccionBasica::MostrarYCargar)
-
-    
-    */
+   
+   
     opcion=interfaz("Bienvenido al sistema de Gestion de Vehiculos. Seleccione una operacion: \n");
-    while(opcion!=AccionBasica::Terminar)
+    while(opcion!=AccionBasica::oTerminar)
     {
-        if(opcion==AccionBasica::Agregar)
+        //opcion 1, agregar vehiculos
+        if(opcion==AccionBasica::oAgregar)
         {
+            system("cls");
             std::cout << "Que clase de vehiculo le gustaria agregar? \n"
-            << "1. Auto\n"
-            << "2. Moto Electrico\n"
-            << "3. Camion\n";
+            << "5. Auto\n"
+            << "6. Moto\n"
+            << "7. Camion\n";
             std::cin >> opcion;
 
-            if(opcion==AccionBasica::Auto)
-            {
-                std::cout << "Ingrese la marca: \n";
-                
-            }
-            
+            if(opcion==AccionBasica::oAuto)
+                cargarAuto(listadoVehiculos);
+            else if(opcion==AccionBasica::oMoto)
+                cargarMoto(listadoVehiculos);
+            else if(opcion==AccionBasica::oCamion)
+                cargarCamion(listadoVehiculos);
         }
-
-        if(opcion==AccionBasica::MostrarYCargar)
+        //opcion 2, mostrar vehiculos (y llamada a metodo cargar)
+        if(opcion==AccionBasica::oMostrarYCargar)
             mostrarLista(listadoVehiculos);
+
+        //opcion 3, cargarle kilometros a un auto
+        if(opcion==AccionBasica::oCargarKilometraje)
+            cargarKilometros(listadoVehiculos);
 
         opcion=interfaz("Seleccione otra operacion: \n");
     }
     
-    limpieza(listadoVehiculos);
-
     
 
+    limpieza(listadoVehiculos);
     
     return 0;
 }

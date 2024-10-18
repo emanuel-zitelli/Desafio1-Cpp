@@ -11,19 +11,19 @@ public:
     void mostrarInfo() const override
     {
 
-        std::cout << "Prueba de polimorfia Moto\n";
+        std::cout << "Prueba de polimorfia Moto Electrica\n";
         
         std::cout << "Modelo: " << modelo << "\n"
         << "Marca: " << marca << "\n"
         << "Year: " << year << "\n"
         << "Kilometraje: " << kilometraje << "\n"
         << "Sidecar: " << tieneSidecar << "\n"
-        << "Bateria: " << bateria << "\n";
+        << "Bateria: " << bateria << "%" << "\n";
     }
     void cargarBateria(double porcentaje) override 
     {
         bateria+=porcentaje;
-        std::cout << "Se ha cargado con exito su Moto electrico. \n";
+        std::cout << "Se ha finalizado con exito la operacion de carga su Moto Electrica. \n ";
     }
     
 };

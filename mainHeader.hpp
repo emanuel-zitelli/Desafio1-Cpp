@@ -5,6 +5,8 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <cstdlib> // system pause y cls
+#include <limits>
 
 //classes
 #include "./classes/class_vehiculo.hpp"
@@ -47,7 +49,7 @@ struct auxCamiones
     std::string modelo;
     int year;
     double kilometraje;
-    bool capacidadCarga;
+    double capacidadCarga;
     
     double bateria;
 };
@@ -55,15 +57,24 @@ struct auxCamiones
 
 enum AccionBasica
 {
-    Agregar=1,
-    MostrarYCargar=2,
-    Terminar=3,
-    Auto=1,
-    Moto=2,
-    Camion=3
+    oAgregar=1,
+    oMostrarYCargar=2,
+    oCargarKilometraje=3,
+    oTerminar=4,
+
+    oAuto=5,
+    oMoto=6,
+    oCamion=7
 };
 
 short int interfaz(std::string frase);
-bool mostrarLista(std::vector<Vehiculo*>& vector);
+
+void cargarAuto(std::vector<Vehiculo*>& lista);
+void cargarMoto(std::vector<Vehiculo*>& lista);
+void cargarCamion(std::vector<Vehiculo*>& lista);
+
+void cargarKilometros(std::vector<Vehiculo*>& lista);
+
+bool mostrarLista(std::vector<Vehiculo*>& lista);
 void limpieza(std::vector<Vehiculo*>& lista);
 #endif //MAINHEADER_HPP

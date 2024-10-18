@@ -1,6 +1,6 @@
 {
     "files.associations": {
-        "*.embeddedhtml": "html",
+        "iostream": "cpp",
         "array": "cpp",
         "atomic": "cpp",
         "bit": "cpp",
@@ -39,7 +39,6 @@
         "format": "cpp",
         "initializer_list": "cpp",
         "iosfwd": "cpp",
-        "iostream": "cpp",
         "istream": "cpp",
         "limits": "cpp",
         "new": "cpp",
@@ -50,7 +49,6 @@
         "streambuf": "cpp",
         "text_encoding": "cpp",
         "typeinfo": "cpp",
-        "variant": "cpp",
-        "fstream": "cpp"
+        "variant": "cpp"
     }
 }

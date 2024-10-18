@@ -5,26 +5,26 @@ class CamionElectrico :  public Camion, public Electricidad
 {
 public:
     
-    CamionElectrico(const std::string& marca, const std::string& modelo, int year, double kilometraje, double capacidadCarga) 
+    CamionElectrico(const std::string& marca, const std::string& modelo, const int year, const double kilometraje, const double capacidadCarga, const double bateria) 
     : Camion(marca, modelo, year, kilometraje, capacidadCarga), Electricidad(bateria) {}
     
     void mostrarInfo() const override
     {
 
-        std::cout << "Prueba de polimorfia Camion\n";
+        std::cout << "Prueba de polimorfia Camion Electrico\n";
         
         std::cout << "Modelo: " << modelo << "\n"
         << "Marca: " << marca << "\n"
         << "Year: " << year << "\n"
         << "Kilometraje: " << kilometraje << "\n"
         << "Capacidad de Carga " << capacidadCarga << "\n"
-        << "Bateria: " << bateria << "\n";
+        << "Bateria: " << bateria << "%" << "\n";
     }
 
     void cargarBateria(double porcentaje) override 
     {
         bateria+=porcentaje;
-        std::cout << "Se ha cargado con exito su Camion electrico. \n";
+        std::cout << "Se ha finalizado con exito la operacion de carga su Camion electrico. \n. \n";
     }
     
 

@@ -17,12 +17,12 @@ public:
         << "Year: " << year << "\n"
         << "Kilometraje: " << kilometraje << "\n"
         << "Cantidad de Puertas: " << cantidadPuertas << "\n"
-        << "Bateria: " << bateria << "\n";
+        << "Bateria: " << bateria << "%" << "\n";
     }
     void cargarBateria(double porcentaje) override 
     {
         bateria+=porcentaje;
-        std::cout << "Se ha cargado con exito su Auto electrico. \n";
+        std::cout << "Se ha finalizado con exito la operacion de carga su Auto electrico. \n";
     }
     
 
