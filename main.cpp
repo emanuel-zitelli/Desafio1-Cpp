@@ -39,7 +39,6 @@ int main()
     }
     
     
-
     limpieza(listadoVehiculos);
     
     return 0;

@@ -134,7 +134,7 @@ void cargarMoto(std::vector<Vehiculo*>& lista)
     std::cout << "Tiene carside? (No:0/ Si:1): ";
     std::cin >> auxMotos.tieneSidecar;
 
-    std::cout << "Es el auto electrico? (Y/N): ";
+    std::cout << "Es la moto electrica? (Y/N): ";
     std::cin >> esElectrico;
     std::tolower(esElectrico);
 
@@ -184,7 +184,7 @@ void cargarCamion(std::vector<Vehiculo*>& lista)
     std::cin.ignore();
     
 
-    std::cout << "Es el auto electrico? (Y/N): ";
+    std::cout << "Es el camion electrico? (Y/N): ";
     std::cin >> esElectrico;
     std::tolower(esElectrico);
 
